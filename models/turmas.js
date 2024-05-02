@@ -1,28 +1,23 @@
+
 //models/Usuario.js
 const Sequelize = require('sequelize')
 const sequelize = require('../config/sequelize')
 
-const Usuario = sequelize.define('Usuarios', {
+const Turmas = sequelize.define('Turmas', {
     // Define as informações da tabela colunas
 
-    idUsuarios: {
+    idturmas: {
         type: Sequelize.INTEGER,
         primaryKey: true, // Define essa coluna como a chave primária
         autoIncrement: true // Indica que é uma chave ´rimária autoincrementável
     },
 
-    nome: Sequelize.STRING,
-    email: Sequelize.STRING,
-    cpf: Sequelize.STRING,
-    senha: Sequelize.STRING,
-    celular: Sequelize.STRING,
-    cep: Sequelize.STRING,
-    logradouro: Sequelize.STRING,
-    bairro: Sequelize.STRING,
-    cidade: Sequelize.STRING,
-    estado: Sequelize.STRING,
-    foto: Sequelize.STRING,
-    Tipos_Usuarios_idTipos_Usuarios: Sequelize.NUMBER,
+codigo: Sequelize.STRING,
+descricao: Sequelize.STRING,
+inicio: Sequelize.DATE,
+fim: Sequelize.DATE,
+fotos: Sequelize.STRING,
+
 
 },
 {
@@ -30,4 +25,4 @@ const Usuario = sequelize.define('Usuarios', {
       timestamps: false   // Adiciona colunas createdAt e updatedAt automaticamente
     });
 
-module.exports = Usuario;
+module.exports = Turmas;
