@@ -10,12 +10,12 @@ router.post('/usuario', usuarioController.createUsuario)
 
 
 
-
-
 router.get('/turmas', turmasController.getAll)
 router.get('/turmas/:id', turmasController.getById)
 
 
 router.post('/turmas', turmasController.createTurma)
+
+router.put('/turmas/:codigo', turmasController.updateTurma)
 
 module.exports = router;
